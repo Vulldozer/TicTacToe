@@ -1,0 +1,419 @@
+using System;
+
+namespace XandO
+{
+    class Program
+    {
+        private static void ClearOut()
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("");
+        }
+
+        private const int V = 10;
+
+        private static void Occupied()
+        {
+            Console.WriteLine("That square is already occupied! program shutting down...");
+        }
+
+        static void Main()
+        {
+            int s1 = 0, s2 = 0, s3 = 0, s4 = 0, s5 = 0, s6 = 0, s7 = 0, s8 = 0, s9 = 0, i, x, o; // sN are the sqaure's status if sN = 0 it's empty if it's sN = 1 it means there's an X in the square and if it's sN = 2 there's an O.
+            string pos1 = "", pos2 = " ", pos3 = " ", pos4 = " ", pos5 = " ", pos6 = " ", pos7 = " ", pos8 = " ", pos9 = " ";
+            ClearOut();
+            Console.WriteLine("Welcome to X and O! (version 1.0)");
+            Console.WriteLine("This program is made by: Vuldozer.");
+            Console.WriteLine("Here is the number of each square:");
+            Console.WriteLine("         1 | 2 | 3");
+            Console.WriteLine("         4 | 5 | 6");
+            Console.WriteLine("         7 | 8 | 9");
+            Console.WriteLine("");
+            Console.WriteLine("");
+            for (i = 0; i < 6; i++)
+            {
+                Console.WriteLine("Please enter the number of the square that you wish the X will go to.");
+                x = int.Parse(Console.ReadLine());
+                ClearOut();
+                if (x == 1)
+                {
+                    if (s1 == 0)
+                    {
+                        s1 = 1;
+                        pos1 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 2)
+                {
+                    if (s2 == 0)
+                    {
+                        s2 = 1;
+                        pos2 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 3)
+                {
+                    if (s3 == 0)
+                    {
+                        s3 = 1;
+                        pos3 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 4)
+                {
+                    if (s4 == 0)
+                    {
+                        s4 = 1;
+                        pos4 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 5)
+                {
+                    if (s5 == 0)
+                    {
+                        s5 = 1;
+                        pos5 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 6)
+                {
+                    if (s6 == 0)
+                    {
+                        s6 = 1;
+                        pos6 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 7)
+                {
+                    if (s7 == 0)
+                    {
+                        s7 = 1;
+                        pos7 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 8)
+                {
+                    if (s8 == 0)
+                    {
+                        s8 = 1;
+                        pos8 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else if (x == 9)
+                {
+                    if (s9 == 0)
+                    {
+                        s9 = 1;
+                        pos9 = "x";
+                    }
+                    else
+                    {
+                        Occupied();
+                        i = V;
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("The number you inserted is invalid, program shutting down...");
+                    i = 12;
+                }
+                if ((s1 == 1) && (s2 == 1) && (s3 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s4 == 1) && (s5 == 1) && (s6 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s7 == 1) && (s8 == 1) && (s9 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s1 == 1) && (s4 == 1) && (s7 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s2 == 1) && (s5 == 1) && (s8 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s3 == 1) && (s6 == 1) && (s9 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s1 == 1) && (s5 == 1) && (s9 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                else if ((s3 == 1) && (s5 == 1) && (s7 == 1))
+                {
+                    Console.WriteLine("The player X have won");
+                    i = V;
+                }
+                if (i <= 11)
+                {
+                    Console.WriteLine("Here is what the board looks like now:");
+                    Console.WriteLine("         {0} | {1} | {2}", pos1, pos2, pos3);
+                    Console.WriteLine("         {0} | {1} | {2}", pos4, pos5, pos6);
+                    Console.WriteLine("         {0} | {1} | {2}", pos7, pos8, pos9);
+                }
+                if (i <= 9)
+                {
+                    Console.WriteLine("Please enter the number of the square that you wish the O will go to.");
+                    o = int.Parse(Console.ReadLine());
+                    ClearOut();
+                    if (o == 1)
+                    {
+                        if (s1 == 0)
+                        {
+                            s1 = 2;
+                            pos1 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 2)
+                    {
+                        if (s2 == 0)
+                        {
+                            s2 = 2;
+                            pos2 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 3)
+                    {
+                        if (s3 == 0)
+                        {
+                            s3 = 2;
+                            pos3 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 4)
+                    {
+                        if (s4 == 0)
+                        {
+                            s4 = 2;
+                            pos4 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 5)
+                    {
+                        if (s5 == 0)
+                        {
+                            s5 = 2;
+                            pos5 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 6)
+                    {
+                        if (s6 == 0)
+                        {
+                            s6 = 2;
+                            pos6 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 7)
+                    {
+                        if (s7 == 0)
+                        {
+                            s7 = 2;
+                            pos7 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 8)
+                    {
+                        if (s8 == 0)
+                        {
+                            s8 = 2;
+                            pos8 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else if (o == 9)
+                    {
+                        if (s9 == 0)
+                        {
+                            s9 = 2;
+                            pos9 = "o";
+                        }
+                        else
+                        {
+                            Occupied();
+                            i = V;
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("The number you inserted is invalid.");
+                        i = 12;
+                    }
+                    if ((s1 == 2) && (s2 == 2) && (s3 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s4 == 2) && (s5 == 2) && (s6 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s7 == 2) && (s8 == 2) && (s9 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s1 == 2) && (s4 == 2) && (s7 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s2 == 2) && (s5 == 2) && (s8 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s3 == 2) && (s6 == 2) && (s9 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s1 == 2) && (s5 == 2) && (s9 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    else if ((s3 == 2) && (s5 == 2) && (s7 == 2))
+                    {
+                        Console.WriteLine("The player O have won");
+                        i = V;
+                    }
+                    if (i <= 11)
+                    {
+                        Console.WriteLine("");
+                        Console.WriteLine("");
+                        Console.WriteLine("Here is what the board looks like now:");
+                        Console.WriteLine("         {0} | {1} | {2}", pos1, pos2, pos3);
+                        Console.WriteLine("         {0} | {1} | {2}", pos4, pos5, pos6);
+                        Console.WriteLine("         {0} | {1} | {2}", pos7, pos8, pos9);
+                    }
+                }
+            }
+        }
+    }
+}
